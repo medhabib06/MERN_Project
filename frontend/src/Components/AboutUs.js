@@ -1,12 +1,11 @@
 import React from 'react'
-import '../App.css'
 
-function Cart() {
+function AboutUs() {
     return (
         <div>
-            CART
+            ABOUT US
         </div>
     )
 }
 
-export default Cart
+export default AboutUs

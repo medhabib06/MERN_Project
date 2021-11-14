@@ -1,12 +1,11 @@
 import React from 'react'
-import '../App.css'
 
-function Cart() {
+function Contact() {
     return (
         <div>
-            CART
+            CONTACT
         </div>
     )
 }
 
-export default Cart
+export default Contact

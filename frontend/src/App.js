@@ -13,6 +13,7 @@ import SideDrawer from "./Components/SideDrawer";
 import BackDrop from "./Components/BackDrop";
 import AboutUs from "./Components/AboutUs";
 import Contact from "./Components/Contact";
+import ProductDetails from "./Components/ProductDetails";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/product/:id" component={Product} />
+          <Route exact path="/ProductDetails/:id" component={ProductDetails} />
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/AboutUs" component={AboutUs} />
           <Route exact path="/Contact" component={Contact} />

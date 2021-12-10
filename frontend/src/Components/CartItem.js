@@ -3,20 +3,17 @@ import './Components.css'
 import {Link} from 'react-router-dom';
 
 
-function CartItem() {
+function CartItem({item, removeHandler}) {
     return (
         <div className='cart_item'>
             <div className="cart_item_image">
-            <img src="" alt="product name"/>
+            <img src={item.imageUrl} alt={item.title}/>
             </div>
             
-        <Link to={`/productDetails/${11}`} className='cart_item_name'>product 1</Link>
-        <div className='cart_item_price'>$99</div>
-        <select className='cart_select'>
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select>
-        <button className='delete_btn'>
+        <Link to={`/ProductDetails/${item._id}`} className='cart_item_name'>{item.name}</Link>
+        <div className='cart_item_price'>{item.price}$</div>
+        
+        <button className='delete_btn' onClick={()=>removeHandler(item.product)}>
             Delete
         </button>
         </div>

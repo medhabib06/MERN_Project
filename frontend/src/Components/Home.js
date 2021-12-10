@@ -7,7 +7,7 @@ import { fetchProducts } from '../redux/actions/productAction'
 
 function Home() {
     const dispatch = useDispatch()
-    const {productList, loading} = useSelector(state => state?.productReducer)
+    const {productList, loading} = useSelector(state => state.productReducer)
 
     useEffect(() => {
         dispatch(fetchProducts())
@@ -17,11 +17,13 @@ function Home() {
     return (
         <div >
            { !loading ? (<div className='homeScreenProducts'>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
+
+              
+            {productList.map((product) => <Product 
+            key={product._id} 
+            product={product}         
+            />)}
+            
             </div>) : "still waiting for data"
             }
         </div>

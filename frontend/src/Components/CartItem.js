@@ -6,8 +6,8 @@ import {Link} from 'react-router-dom';
 function CartItem({item, removeHandler}) {
     return (
         <div className='cart_item'>
-            <div className="cart_item_image">
-            <img src={item.imageUrl} alt={item.title}/>
+            <div>
+            <img className="cart_item_image" src={item.imageUrl} alt={item.title}/>
             </div>
             
         <Link to={`/ProductDetails/${item._id}`} className='cart_item_name'>{item.name}</Link>

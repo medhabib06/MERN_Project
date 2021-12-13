@@ -26,10 +26,11 @@ const product = useSelector(state=>state
         <div className="product_details"> 
             {/* { loading ? <h2>LOADING</h2> :(  */}
               
-              <div>
+              
             <div className="details_left">
-                <div className='details_image'>
-                    <img src={product.image}   alt={product.title}/> </div>
+                <div >
+                    <img className='details_image' src={product.image}   alt={product.title}/> </div>
+                    
                     <div className="left_info">
                     <p className='left_name'>{product.title}</p>
                     <p>price: {product.price}$</p>
@@ -45,25 +46,16 @@ const product = useSelector(state=>state
                     <p>
                         status: <span>In stock</span>
                     </p>
-                    <p>Quantity
-                        <select className='selectQty'>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </p>
                     
-                    <p><button type='button' className='addToCart' onClick={addToCartHandler}>Add to cart</button></p>
+                    
+                    <p><button type='button' className='addToCart' onClick={addToCartHandler} >Add to cart</button></p>
                     </div>
                 
             
             </div>
             </div>
         
-        {/* )
-        } */}
-        </div>
         )
-    }  
+        } 
 
 export default ProductDetails 

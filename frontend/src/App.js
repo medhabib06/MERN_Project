@@ -9,8 +9,6 @@ import Home from './Components/Home';
 import Product from './Components/Product';
 import Cart from './Components/Cart';
 import NavBar from './Components/Navbar';
-import SideDrawer from "./Components/SideDrawer";
-import BackDrop from "./Components/BackDrop";
 import AboutUs from "./Components/AboutUs";
 import Contact from "./Components/Contact";
 import ProductDetails from "./Components/ProductDetails";

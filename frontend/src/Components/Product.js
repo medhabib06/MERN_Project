@@ -7,7 +7,7 @@ function Product({product}) {
     console.log(product.description)
     return (
         <div className='Product'>
-            <img src={product.image} alt={product.title}/>
+            <img  src={product.image} alt={product.title}/>
 
             <div className="productInfo">
                 <p className={product.title}></p>
